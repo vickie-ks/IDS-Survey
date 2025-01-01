@@ -1,0 +1,78 @@
+\section{Discussion and Future Scope}
+\label{Discussion}
+
+\begin{table*}[ht]
+    \centering % Centers the table vertically on the page
+    \caption{IDS Deep Learning Architectures}
+    \renewcommand{\arraystretch}{1.5} % Increases the vertical spacing for readability
+    \begin{tabular}{|p{1.5cm}|p{2cm}|p{4cm}|p{4cm}|p{2cm}|p{2.1cm}|}
+        \hline
+        \textbf{Reference} & \textbf{Focus} & \textbf{Summary} & \textbf{Strengths} & \textbf{Dataset} & \textbf{Evaluation} \\
+        \hline
+        17 & Performance Evaluation of Deep Learning Architectures for Intrusion Detection & Investigates the performance of different deep learning architectures for intrusion detection, employing various deep learning models with varying complexity levels and evaluating their performance on four large datasets. & Provides detailed explanations of the deep learning models used, including architecture and hyperparameter settings. & UNSW-NB15, CIC-IDS-2017, 5G-NIDD, FLNET2023 & Accuracy, Precision, Recall, F1 Score \\
+        \hline
+        12 & Image-Based Sequential Packet Representation for Real-Time NIDS & Proposes an image-based sequential packet representation method for real-time network intrusion detection, using the median number of packets per attack type to determine image dimensions and splitting the image data for training, validation, and testing. & Offers a detailed description of the methodology for packet-based feature extraction, image representation, and model development. Discusses considerations for data splitting and preventing model bias. & CIC-IDS2017, CIC-IDS2018 & Accuracy, Precision, Recall, F1 Score, True Positive Rate, True Negative Rate, False Negative Rate, False Positive Rate \\
+        \hline
+        2 & Deep Learning for Intelligent Intrusion Detection System with Hybrid Framework & Explores deep learning for an intelligent intrusion detection system, emphasizing a hybrid framework of network-based and host-based intrusion detection. It involves advanced text representation methods from natural language processing (NLP) for host-level events and utilizes multiple benchmark datasets for comparative experimentation. & Examines the application of advanced text representation methods from NLP and evaluates the effectiveness of these methods on multiple datasets. Highlights the pros and cons of network-based and host-based intrusion detection systems. & ADFA-LD, ADFA-WD, KDDCup 99, NSL-KDD, Kyoto, CICIDS 2017, UNSW-NB15, WSN-DS & Accuracy, precision, recall, F1-score, and confusion matrices. \\
+        \hline
+        5 & Deep Learning for Intrusion Detection & Discusses the use of deep learning algorithms for intrusion detection, comparing them with traditional ML algorithms, and highlighting their strengths, including the ability to automatically extract features and learn complex patterns. & Provides a table summarizing various deep-learning-based IDS studies, including their datasets, results, and the authors' areas of interest. & KDD CUP99, NSL KDD, CIC IDS 2017, CSE CIC 2018 & Accuracy, Detection, Classification \\
+        \hline
+        6 & Anomaly-Based Intrusion Detection for IoT Using Convolutional Neural Networks (CNNs) & Proposes an anomaly-based intrusion detection model for IoT networks using CNNs. The model analyzes network traffic to identify deviations from normal behavior, indicating potential threats or attacks. & Discusses the model's focus on the intersection of IoT, Network Security Mechanisms (NIDS), and deep learning techniques (CNNs). Highlights the advantages of deep learning techniques for anomaly detection, particularly their ability to handle large datasets and complex patterns. & DARPA & Accuracy, Precision, Recall, F1-score, False positive/negative rates \\
+        \hline
+    \end{tabular}
+    \label{tab:IntrusionDetection}
+\end{table*}
+
+
+
+
+
+
+The field of Intrusion Detection Systems (IDS) has seen rapid advancements, driven by the integration of Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL). These technologies have enabled the development of systems capable of addressing the growing complexity of cyber threats. This section delves into the emerging trends that shape IDS research, the unresolved challenges that hinder progress, and the potential directions for future investigation.
+
+
+
+
+\subsection{Emerging Trends in IDS Research}
+The adoption of advanced AI/ML/DL techniques is one of the most prominent trends in IDS research. These approaches have transformed traditional systems into adaptive frameworks capable of identifying patterns in network traffic and detecting anomalies in real time. Explainable AI (XAI) has emerged as a critical component in this evolution, addressing the interpretability challenges associated with complex models. Studies like~\cite{Islam2023} highlighted the importance of XAI in enhancing trust and reliability, allowing analysts to understand the rationale behind IDS decisions. By leveraging feature importance and visual explanations, XAI frameworks make the deployment of AI-driven IDS in real-world scenarios more feasible.
+
+Hybrid methodologies that combine signature-based and anomaly-based detection are also becoming a cornerstone of IDS research. These models exploit the strengths of both approaches to achieve higher detection accuracy and lower false positive rates. For example, \cite{Mohammad2024} introduced a two-stage classifier that blended heuristic methods with DL, offering superior performance in complex network environments. The increasing adoption of hybrid models underscores the need for versatile systems capable of adapting to evolving attack strategies.
+
+Real-time detection capabilities are another pivotal area of focus. With the growing scale and speed of network traffic, the ability to detect and mitigate threats instantaneously is essential. In~\cite{Ghadermazi2024}, the use of image-based representations of packet data enabled convolutional neural networks (CNNs) to achieve near-instantaneous detection. Concurrently,~\cite{Chen2024} emphasized latency reduction strategies in distributed systems, highlighting the practical benefits of real-time IDS for modern high-speed networks.
+
+The rise of adversarial threats has propelled research into robust IDS models. Attackers often craft inputs designed to evade detection by exploiting vulnerabilities in AI-based systems. Studies such as~\cite{Alotaibi2023AML} explored adversarial training and robust feature selection to enhance resilience against such attacks. Moreover,~\cite{Roshan2024} presented a two-phase defense strategy that effectively countered untargeted white-box adversarial attacks, paving the way for more secure systems.
+
+Finally, the demand for energy-efficient IDS has grown, particularly in IoT and edge environments where computational resources are limited. Research like~\cite{Gutierrez2023} and~\cite{Sowmya2023} demonstrated the viability of lightweight architectures that minimize resource consumption while maintaining high detection accuracy. These advancements are critical for ensuring the deployability of IDS across diverse platforms and scenarios.
+
+
+
+
+\subsection{Unresolved Challenges in IDS Research}
+Despite the significant strides made in IDS research, several challenges remain unresolved. A primary issue lies in the quality and diversity of datasets. Benchmarks like NSL-KDD and CICIDS2017 have been widely adopted, but they lack the ability to capture modern attack patterns and real-world complexities. Studies such as~\cite{Mirlekar2022} and~\cite{Jayalaxmi2022} noted that these datasets often oversimplify the dynamic nature of real-world network traffic, limiting the generalizability of trained models. Custom datasets, like those introduced in~\cite{Ghadermazi2024} and~\cite{aljuaid2024deep}, offer potential solutions by addressing specific use cases. However, concerns about reproducibility and cross-environment adaptability persist.
+
+Balancing detection accuracy with operational efficiency is another persistent challenge. High-accuracy models often demand substantial computational resources, making them impractical for resource-constrained environments like IoT networks. For instance, \cite{wang2023} and\cite{Sowmya2023} highlighted the need for optimized architectures that achieve high detection rates without incurring excessive energy or computational costs. This trade-off underscores the importance of designing lightweight solutions that do not compromise on effectiveness.
+
+Scalability remains a significant hurdle as networks continue to grow in size and complexity. Distributed learning techniques, as explored in~\cite{Dandaras2023}, show promise in handling large-scale traffic by distributing the computational load across multiple nodes. However, challenges related to synchronization, fault tolerance, and real-time decision-making in distributed architectures remain largely unaddressed.
+
+Adversarial threats pose an ongoing challenge to AI-driven IDS. Attackers constantly innovate new techniques to bypass detection mechanisms. While studies like~\cite{Alotaibi2023AML} and~\cite{Roshan2024} proposed robust defenses, these methods often introduce additional computational overheads and may not fully counter emerging attack vectors. This highlights the need for adaptive systems capable of proactively identifying and mitigating adversarial risks.
+
+
+
+\subsection{Future Directions in IDS Research}
+To address these challenges and capitalize on emerging opportunities, future research in IDS must focus on several key areas.
+
+Enhancing dataset quality and diversity is paramount. Collaboration between academia and industry, as suggested by~\cite{Gutierrez2023} and~\cite{Roshan2024}, could facilitate the development of standardized datasets that reflect contemporary network conditions, encrypted traffic, and multi-modal attack vectors. Such datasets would enable more robust and generalizable models, improving real-world applicability.
+
+The development of lightweight and energy-efficient architectures is another critical priority. Techniques like model pruning, quantization, and collaborative edge-cloud frameworks, as explored in~\cite{Sowmya2023} and~\cite{Mohammad2024}, offer promising avenues for reducing resource consumption while maintaining performance. These innovations are particularly relevant for IoT and edge computing environments, where constraints on power and processing capabilities are significant.
+
+Adversarial defenses must evolve to anticipate and counteract sophisticated attack strategies. Proactive approaches, such as those combining adversarial training with explainable AI, have shown potential in studies like~\cite{Islam2023} and~\cite{Alotaibi2023AML}. Further exploration of reinforcement learning and game-theoretic techniques could yield systems capable of dynamically adapting to new adversarial tactics.
+
+Real-time detection systems must continue to innovate to handle high-speed and large-scale networks. Advances in distributed architectures, as highlighted in~\cite{Chen2024} and~\cite{Dandaras2023}, demonstrate the potential for scalable, real-time IDS solutions. These systems must prioritize low-latency processing while maintaining high detection accuracy, for seamless integration into modern enterprise environments.
+
+Finally, the integration of Explainable AI (XAI) into IDS design will play a pivotal role in bridging the gap between model complexity and interpretability. Studies like~\cite{Jayalaxmi2022} emphasized the importance of transparency in fostering trust among security analysts. Future research should explore ways to enhance the interpretability of DL models without compromising performance.
+
+
+
+
+\subsection{Summary}
+The integration of AI, ML, and DL into IDS has revolutionized the field, offering unprecedented capabilities for detecting and mitigating cyber threats. While significant progress has been made, challenges such as dataset limitations, scalability, and adversarial robustness continue to impede widespread adoption. By focusing on innovative solutions and fostering collaboration, future research can unlock the full potential of IDS, enabling more secure and resilient networks.

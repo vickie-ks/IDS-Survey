@@ -1,0 +1,129 @@
+\section{Literature Review}
+\label{LiteratureReview}
+This section delves into an in-depth analysis of 20 selected studies on Intrusion Detection Systems (IDS), emphasizing the performance metrics and datasets used. The review reflects the advancements in Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL) methodologies, highlighting their practical implications, challenges, and contributions to IDS research.
+
+\begin{table*}[h]
+  \centering
+  \caption{Techniques and Their Performance Across IDS Types}
+  \setlength{\tabcolsep}{11pt} % Adjust horizontal cell padding
+  \renewcommand{\arraystretch}{1.5} % Adjust vertical cell padding
+  \resizebox{\textwidth}{!}{
+    \fontsize{15pt}{15pt}\selectfont
+    \begin{tabular}{|>{\centering\arraybackslash}p{4.5cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{5cm}|} \hline
+      \multicolumn{1}{|c|}{\textbf{Technique/Model}} & 
+      \multicolumn{1}{c|}{\textbf{Host-Based IDS (HIDS)}} & 
+      \multicolumn{1}{c|}{\textbf{Network-Based IDS (NIDS)}} & 
+      \multicolumn{1}{c|}{\textbf{Signature-Based IDS}} & 
+      \multicolumn{1}{c|}{\textbf{Anomaly-Based IDS}} & 
+      \multicolumn{1}{c|}{\textbf{Hybrid IDS}} & 
+      \multicolumn{1}{c|}{\textbf{Performance Level}} \\ \hline
+      Support Vector Machines (SVMs) & Medium & Medium & High & Medium & Medium & Good for anomaly detection \\ \hline
+      Decision Trees & Medium & Medium & High & Medium & Medium & Effective for basic intrusion detection \\ \hline
+      Random Forests & Medium & Medium & High & Medium & High & Good for robust comparisons \\ \hline
+      Convolutional Neural Networks (CNNs) & High & High & Medium & High & High & Best for spatial pattern recognition \\ \hline
+      Recurrent Neural Networks (RNNs) & High & High & Medium & High & High & Best for temporal patterns \\ \hline
+      Autoencoders & Medium & High & Low & Medium & Medium & Useful for feature reduction and unsupervised learning \\ \hline
+      Hybrid AI Models & High & High & High & High & High & Combines strengths of multiple approaches \\ \hline
+    \end{tabular}
+  }
+  \label{tab:TechniquesIDSPerformance}
+\end{table*}
+
+This Table~\ref{tab:TechniquesIDSPerformance} provides a comprehensive mapping between various types of Intrusion Detection Systems (IDS) and the techniques employed to enhance their performance. By categorizing the techniques based on their application to Host-Based IDS (HIDS), Network-Based IDS (NIDS), Signature-Based IDS, Anomaly-Based IDS, and Hybrid IDS, the table illustrates their suitability and effectiveness across diverse IDS implementations.
+
+Support Vector Machines (SVMs) are widely regarded for their efficiency in anomaly detection, as they excel in identifying data points that deviate from established patterns. They perform at a medium level for HIDS, NIDS, and Hybrid IDS but exhibit high efficacy in Signature-Based IDS due to their reliance on labeled data and defined attack patterns~\cite{Mirlekar2022}. Decision Trees, another commonly used technique, provide straightforward rule-based classifications. While effective at detecting known attack signatures (high performance in Signature-Based IDS), they show medium performance in other IDS types due to their limited ability to generalize across evolving threats~\cite{Jayalaxmi2022}.
+
+Random Forests, an ensemble learning method, demonstrate medium to high performance across IDS types. Their robustness against overfitting and capacity for handling diverse datasets make them a preferred choice, particularly for Hybrid IDS, where they achieve high detection rates by integrating data from multiple sources~\cite{Meena2021}. Convolutional Neural Networks (CNNs), a deep learning technique, stand out for their ability to process spatial patterns in network traffic. CNNs achieve high performance in NIDS, HIDS, and Hybrid IDS, although their utility in Signature-Based IDS is limited due to the lack of spatial dependencies in attack signatures~\cite{Ghadermazi2024}.
+
+Recurrent Neural Networks (RNNs), designed for sequential data, are highly effective in identifying temporal patterns in network traffic, such as those found in Distributed Denial of Service (DDoS) attacks. They perform at a high level across most IDS types, particularly in Anomaly-Based and Hybrid IDS, where temporal dependencies are critical for accuracy~\cite{vinayakumar2019deep}. Autoencoders, which are unsupervised learning models, are moderately effective in HIDS and NIDS due to their ability to reduce feature dimensionality and identify anomalies. However, they exhibit lower performance in Signature-Based IDS because their unsupervised nature does not leverage predefined attack patterns~\cite{Roshan2024}.
+
+Hybrid AI models, which integrate multiple techniques such as Random Forests and CNNs, achieve consistently high performance across all IDS types. Their ability to combine the strengths of different methodologies allows them to address both known and unknown threats effectively, making them a versatile solution for modern IDS implementations~\cite{Rele2023}. These models leverage advanced feature selection and classification mechanisms, resulting in significant improvements in detection accuracy and robustness against adversarial attacks~\cite{Alotaibi2023AML}.
+
+
+
+\subsection{Performance Metrics in IDS Studies}
+Performance metrics are crucial for evaluating the feasibility and practicality of IDS in real-world scenarios, where high-speed networks and dynamic environments require systems to perform consistently under stringent conditions.
+
+
+\begin{table}[h]
+  \centering
+  \caption{Performance Metrics Across 20 Surveyed Papers}
+  \setlength{\extrarowheight}{2pt} % Add spacing for better readability
+  \begin{tabular}{|>{\centering\arraybackslash}c|>{\centering\arraybackslash}c|>{\centering\arraybackslash}c|>{\centering\arraybackslash}c|>{\centering\arraybackslash}p{2.4cm}|}
+  % \begin{tabular}{|l|c|c|c|p{2.4cm}|}
+    \hline
+    \textbf{Paper} & \textbf{Throughput} & \textbf{Latency} & \textbf{Scalability} & \textbf{Adversarial Robustness} \\
+    \hline
+    \cite{Mirlekar2022}        & -         & -       & Medium  & Medium \\
+    \cite{Meena2021}           & -         & -       & Medium  & Low    \\
+    \cite{vinayakumar2019deep} & 900 Mbps  & 300 ms  & High    & Medium \\
+    \cite{Gutierrez2023}       & 700 Mbps  & -       & High    & High   \\
+    \cite{Islam2023}           & 600 Mbps  & -       & High    & Low    \\
+    \cite{Varshney2021}        & -         & 400 ms  & Medium  & Medium \\
+    \cite{Sadia2024}           & -         & -       & Medium  & High   \\
+    \cite{Amanoul2021}         & -         & -       & Medium  & Low    \\
+    \cite{Rele2023}            & 500 Mbps  & -       & Medium  & Low    \\
+    \cite{Jayalaxmi2022}       & -         & 200 ms  & High    & Medium \\
+    \cite{Dandaras2023}        & -         & -       & Medium  & Low    \\
+    \cite{macas2020review}     & -         & -       & Medium  & Medium \\
+    \cite{Ghadermazi2024}      & 1 Gbps    & -       & High    & Medium \\
+    \cite{Roshan2024}          & -         & 300 ms  & Medium  & High   \\
+    \cite{Chen2024}            & -         & 250 ms  & Medium  & Medium \\
+    \cite{Sowmya2023}          & -         & -       & Medium  & Medium \\
+    \cite{aljuaid2024deep}     & -         & -       & Medium  & High   \\
+    \cite{wang2023}  & -         & -       & Medium  & High   \\
+    \cite{Mohammad2024}        & -         & -       & Medium  & Medium \\
+    \cite{Alotaibi2023AML}     & -         & -       & Medium  & High   \\
+    \hline
+  \end{tabular}
+  \label{tab:PerformanceMetrics}
+\end{table}
+
+The performance metrics table~\ref{tab:PerformanceMetrics} provides a comprehensive comparison of key factors influencing the efficacy of Intrusion Detection Systems (IDS) across 20 surveyed papers. Metrics such as throughput, latency, scalability, and adversarial robustness are highlighted to evaluate the practical application of each study. For instance, papers like \cite{vinayakumar2019deep} and \cite{Ghadermazi2024} demonstrate high throughput capabilities, critical for handling large-scale networks, while \cite{Jayalaxmi2022} and \cite{Roshan2024} focus on low-latency detection, essential for real-time threat response. Scalability is consistently rated medium to high, reflecting efforts to adapt IDS to growing network demands. Adversarial robustness varies, with studies like \cite{Alotaibi2023AML} addressing challenges posed by advanced evasion techniques. This table effectively summarizes the strengths and limitations of each paper, providing insights for future IDS development.
+
+Throughput is a key metric that determines the volume of data processed by an IDS per unit time. For example, in~\cite{Ghadermazi2024}, the authors proposed a packet-based sequential detection system capable of achieving gigabit-level processing rates without compromising detection accuracy. Similarly,~\cite{Rele2023}, achieved enhanced throughput while maintaining low error rates.
+
+Latency, which measures the time taken by the system to detect and respond to threats, is another critical metric. Real-time detection systems, such as the one proposed by~\cite{Jayalaxmi2022}, demonstrated sub-second latency while maintaining high detection accuracy. Moreover,~\cite{Roshan2024} introduced a two-phase IDS that balanced fast detection with thorough analysis, enabling low-latency processing in enterprise-scale networks.
+
+Scalability emerged as a major focus area, reflecting the need for IDS to handle exponential growth in network traffic. Distributed frameworks proposed by~\cite{Islam2023} showed significant promise in achieving linear scalability while maintaining high detection efficacy. Techniques such as parallel processing, utilized in~\cite{Gutierrez2023}, further demonstrated the potential to handle millions of connections without significant performance degradation.
+
+Adversarial robustness has become increasingly important with the rise of sophisticated evasion techniques. Research by~\cite{Alotaibi2023AML} evaluated adversarial attacks on IDS models, revealing vulnerabilities and proposing adversarial training as a solution. Enhanced feature selection mechanisms, as discussed in~\cite{Roshan2024}, were instrumental in mitigating adversarial risks.
+
+In addition to these metrics, energy efficiency and real-time detection capabilities were emphasized in studies like~\cite{Gutierrez2023} and~\cite{Chen2024}, underscoring the practical requirements for IDS deployed in IoT and edge computing environments.
+
+
+
+
+\subsection{Traditional Metrics in IDS Evaluation}
+While performance metrics dominate modern research, traditional evaluation metrics continue to serve as essential benchmarks for assessing the reliability and robustness of IDS models.
+
+Accuracy, the proportion of correctly classified instances, is widely reported in IDS studies. Papers such as~\cite{Mirlekar2022} and~\cite{wang2023} highlighted the importance of accuracy but acknowledged its limitations, particularly in datasets with class imbalance. To address these challenges, researchers incorporated complementary metrics such as precision and recall. For instance, in~\cite{Meena2021}, precision was critical for minimizing false positives, while recall ensured comprehensive detection of threats.
+
+The F1 score, a harmonic mean of precision and recall, proved especially useful for evaluating systems trained on imbalanced datasets. Studies such as~\cite{Jayalaxmi2022} and~\cite{Mohammad2024} emphasized the F1 score to provide a balanced assessment of detection performance. Furthermore, metrics like the false positive rate (FPR) and detection rate (DR) were explored in~\cite{aljuaid2024deep} and~\cite{Roshan2024} to optimize IDS for practical deployment, balancing the need for high sensitivity with operational efficiency.
+
+
+
+\subsection{Datasets in IDS Research}
+The selection of datasets is a foundational aspect of IDS research, as it influences the model's training, evaluation, and generalization to real-world scenarios.
+
+NSL-KDD remains a popular choice for benchmarking IDS due to its reduced redundancy and balanced class distribution. However, its limitations in representing modern attack patterns have been noted in~\cite{Mirlekar2022} and~\cite{Rele2023}, where researchers emphasized the need for updated benchmarks.
+
+UNSW-NB15 has gained traction for its realistic traffic representation and diverse attack scenarios. Studies such as~\cite{Gutierrez2023} and~\cite{Sowmya2023} leveraged this dataset to evaluate anomaly detection models, showcasing its applicability in modern networks.
+
+CICIDS2017 provides a realistic mix of benign and malicious traffic, making it a preferred choice for evaluating hybrid and DL-based IDS models. Papers like~\cite{vinayakumar2019deep} and~\cite{Islam2023} demonstrated its effectiveness in testing scalability and real-time detection capabilities.
+
+Custom datasets address gaps in public benchmarks, as seen in~\cite{Ghadermazi2024}, where a novel dataset was developed for evaluating image-based intrusion detection. Similarly, synthetic datasets used in~\cite{Alotaibi2023AML} provided controlled environments for testing adversarial robustness, offering valuable insights into model vulnerabilities.
+
+
+
+
+\subsection{Comparative Insights}
+The comprehensive analysis of performance metrics and datasets yields several key insights. First, there is a noticeable shift in research focus toward practical performance metrics like throughput, latency, and scalability, as highlighted in~\cite{Gutierrez2023}. Second, adversarial robustness is gaining prominence as IDS models face increasingly sophisticated threats, with studies like~\cite{Alotaibi2023AML} leading the charge in this domain. Finally, the lack of diversity in benchmark datasets continue to be a challenge, necessitating innovative solutions like custom and synthetic datasets to bridge the gap, as demonstrated in~\cite{Ghadermazi2024}.
+
+
+
+
+\subsection{Summary}
+This literature review underscores the evolving priorities in IDS research, from traditional metrics like accuracy and precision to advanced performance-oriented measures such as throughput and adversarial robustness. By systematically analyzing these aspects across 20 studies, this survey lays a strong foundation for discussing trends, challenges, and future directions in IDS development.
+
+

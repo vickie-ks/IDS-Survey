@@ -1,0 +1,65 @@
+\section{Intrusion Detection Systems and AI/ML/DL Integration}
+\label{FoundationalConcepts}
+
+\subsection{Intrusion Detection Systems: Concepts, Evolution, and Types}
+Intrusion Detection Systems (IDS) are a cornerstone of modern cybersecurity frameworks, designed to monitor and identify unauthorized access or malicious activities in networks and hosts~\cite{Mirlekar2022}. These systems ensure the security, integrity, and availability of critical infrastructures and digital assets by flagging activities that deviate from established norms or known attack patterns.
+
+\subsubsection{Host-Based IDS (HIDS)} These systems focus on analyzing activities at the host level, including file integrity checks, system call traces, and user behavior monitoring. HIDS are particularly effective in detecting localized threats but are resource-intensive and lack scalability for extensive networks~\cite{vinayakumar2019deep}. 
+
+\subsubsection{Network-Based IDS (NIDS)} NIDS monitor traffic across the network, analyzing packet headers and payloads to detect malicious activities. These systems are adept at identifying patterns indicative of distributed attacks but often face challenges in real-time data processing due to the volume of network traffic~\cite{Meena2021}.
+
+\subsubsection{Signature-Based IDS} These systems rely on predefined rules or attack signatures to identify threats. While efficient against known threats, they fail to address zero-day attacks and dynamic adversarial strategies~\cite{Sadia2024}. 
+
+\subsubsection{Anomaly-Based IDS} By employing statistical models and machine learning techniques, anomaly-based IDS detect deviations from baseline behavior. They excel in identifying unknown threats but are prone to high false positive rates~\cite{Jayalaxmi2022}. 
+
+\subsubsection{Hybrid IDS} Integrating signature-based and anomaly-based techniques, hybrid systems combine the strengths of both approaches to improve detection accuracy and reduce false alarms~\cite{Rele2023}.
+
+\subsection{AI/ML/DL: Transforming Intrusion Detection} 
+The integration of Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL) into IDS has revolutionized the detection and prevention of cyber threats. These technologies enable IDS to process vast amounts of data, identify complex patterns, and adapt to emerging attack vectors, offering significant advantages over traditional systems~\cite{Gutierrez2023}.
+
+\subsubsection{Machine Learning (ML) in IDS} ML models, such as Support Vector Machines (SVM), Decision Trees, and Random Forests, are widely used for traffic classification and anomaly detection. These models rely on feature extraction, where domain-specific knowledge is essential to derive meaningful insights from raw data~\cite{Amanoul2021}. Despite their efficacy, the dependency on handcrafted features often limits their adaptability~\cite{Meena2021}.
+
+\subsubsection{Deep Learning (DL) in IDS} DL models, including Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs), overcome the limitations of feature engineering by learning hierarchical data representations. CNNs, for example, excel in analyzing spatial patterns in network traffic, while RNNs are effective in capturing temporal dependencies~\cite{vinayakumar2019deep}. Recent innovations, such as transforming network packets into images for analysis, have demonstrated the potential of DL to enhance detection accuracy and robustness~\cite{Ghadermazi2024}.
+
+\subsubsection{Hybrid AI Models} Hybrid approaches that combine ML and DL methodologies leverage the strengths of both to improve detection performance. For instance, using Random Forests for feature selection followed by classification using DL models has shown superior results in identifying complex attack patterns~\cite{Rele2023}.
+
+\subsection{Advantages of AI/ML/DL Integration}
+The integration of AI/ML/DL techniques into IDS provides several transformative benefits:
+
+\subsubsection{Enhanced Detection Accuracy} These technologies significantly outperform traditional methods in identifying both known and novel attack patterns~\cite{Jayalaxmi2022}.
+
+\subsubsection{Scalability and Real-Time Capabilities} AI-driven IDS can process large-scale data in real time, making them suitable for modern high-speed networks~\cite{Gutierrez2023}.
+
+\subsubsection{Adaptability to Evolving Threats} Continuous learning enables AI-based IDS to remain effective against zero-day vulnerabilities and adversarial attacks~\cite{vinayakumar2019deep}.
+
+\subsection{Challenges in Integrating AI/ML/DL}
+The integration of Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL) into Intrusion Detection Systems (IDS) has shown great promise, but several challenges hinder their widespread adoption and effectiveness. Addressing these challenges is crucial to advancing IDS technologies.
+
+\subsubsection{Dataset Limitations} The efficacy of AI/ML/DL models heavily relies on the quality, diversity, and size of the datasets used for training and evaluation. Existing benchmark datasets such as NSL-KDD, UNSW-NB15, and CICIDS2017, while widely used in the research community, often lack the complexity and variability of real-world network environments~\cite{Sadia2024}. Many datasets are outdated or fail to incorporate the latest attack vectors, leaving models ill-equipped to handle emerging threats. Additionally, the class imbalance problem—where malicious activities represent only a small portion of the dataset—leads to biased models that prioritize normal traffic over detecting rare attacks~\cite{Jayalaxmi2022}. The lack of publicly available datasets also limits reproducibility and comparability in IDS research, as researchers often rely on proprietary or simulated datasets that may not generalize well to real-world scenarios~\cite{Gutierrez2023}.
+
+\subsubsection{Adversarial Attacks} AI and ML models in IDS are increasingly vulnerable to adversarial manipulations, where attackers craft inputs designed to deceive the model. For example, adversarial samples can slightly perturb benign traffic to appear malicious or vice versa, bypassing detection systems~\cite{Alotaibi2023AML}. This vulnerability is particularly concerning for deep learning models, which, despite their accuracy, often act as "black boxes" with limited interpretability. Without robust defenses, adversarial attacks can compromise the reliability of IDS and expose critical systems to undetected threats.
+
+\subsubsection{Computational Overheads} Training deep learning models is resource-intensive, requiring significant computational power, memory, and time. For instance, models like Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM) networks involve millions of parameters that demand advanced hardware such as GPUs or TPUs for effective training~\cite{Gutierrez2023}. This requirement presents a barrier for organizations with limited budgets or resource-constrained environments, such as IoT networks and edge computing platforms. Optimizing computational efficiency while maintaining performance remains a key research challenge.
+
+The application of deep learning (DL) techniques in Intrusion Detection Systems (IDS) has significantly advanced the field of cybersecurity, providing enhanced detection capabilities against complex and evolving threats. As highlighted by Macas and Wu~\cite{macas2020review}, DL methods such as Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and autoencoders have proven highly effective in identifying both known and unknown attack patterns due to their ability to learn hierarchical data representations from raw network traffic. These approaches eliminate the need for extensive feature engineering, a limitation commonly associated with traditional machine learning models. However, the study also points out critical challenges, including the high computational demands of training and deploying DL models, as well as their susceptibility to adversarial attacks. This duality underscores the need for optimized architectures and robust defenses to fully harness the potential of deep learning in IDS. The comprehensive review provided in the study serves as a foundational reference for understanding the strengths and limitations of DL methods in cybersecurity applications.
+
+\subsubsection{Real-Time Constraints} Deploying AI-based IDS in real-time environments poses challenges due to latency and throughput requirements. High-speed networks generate vast amounts of data, making it difficult for AI models to process traffic in real-time without sacrificing accuracy or increasing false positives~\cite{Ghadermazi2024}. Models must strike a balance between computational efficiency and detection capability to be viable for real-world deployment.
+
+
+
+
+\subsection{Metrics-Driven Evaluation in IDS Research}
+Robust evaluation metrics are essential to assessing the performance and reliability of IDS. Metrics serve as standardized benchmarks for comparing different models, guiding researchers and practitioners in identifying the most effective approaches for specific use cases.
+
+\subsubsection{Commonly Used Metrics} \emph{Accuracy} measures the proportion of correctly classified instances out of the total instances. While widely reported, accuracy alone can be misleading in cases of class imbalance, where models may achieve high accuracy by predominantly classifying normal traffic~\cite{Islam2023}. \emph{Precision} quantifies the proportion of correctly identified positive cases (e.g., malicious traffic), while \emph{recall} assesses the model's ability to capture all actual positive cases. Together, they offer a nuanced view of a model's detection capability~\cite{Jayalaxmi2022}. The harmonic mean of precision and recall, the \emph{F1 score} provides a balanced measure, particularly useful when evaluating models in imbalanced datasets~\cite{Gutierrez2023}. Represents the proportion of benign traffic misclassified as malicious. \emph{Minimizing False Positive Rate (FPR)} is crucial to reducing operational overheads and maintaining trust in the system's recommendations~\cite{vinayakumar2019deep}. Also known as sensitivity, \emph{Detection Rate (DR)} measures the proportion of correctly detected malicious traffic and is critical for evaluating an IDS's effectiveness~\cite{Meena2021}.
+
+\subsubsection{Significance of Metrics in IDS Research} Metrics enable researchers to objectively compare methodologies across different datasets and experimental setups. For example, a model achieving high accuracy but with a high FPR may be unsuitable for real-world deployment~\cite{Jayalaxmi2022}. They also highlight trade-offs between performance indicators. For instance, reducing FPR often comes at the cost of lowering recall, necessitating a balanced approach to optimize IDS performance~\cite{Gutierrez2023}.
+
+\subsubsection{Emerging Evaluation Trends} With the rise of Explainable AI (XAI), researchers are beginning to evaluate interpretability alongside traditional metrics, ensuring that IDS models not only perform well but also provide insights into their decision-making processes~\cite{Islam2023}. The need for domain adaptability has led to cross-dataset evaluations, where models are trained on one dataset and tested on another to assess their generalizability~\cite{Sadia2024}. Real-time performance metrics, such as latency and throughput, are gaining prominence as AI-driven IDS transition from research to deployment~\cite{Ghadermazi2024}.
+
+By focusing on robust and diverse metrics, IDS research can address the practical challenges of scalability, adaptability, and operational efficiency, paving the way for next-generation intrusion detection systems.
+
+
+
+
+
